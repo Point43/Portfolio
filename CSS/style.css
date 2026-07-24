@@ -54,7 +54,9 @@
 body {
     background-color: #f0edee;
     font-family: 'Roboto mono', monospace;
-    color: #23001e
+    color: #23001e;
+    max-width: 100%;
+    display: block;
 }
 
 
