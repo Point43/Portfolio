@@ -50,6 +50,46 @@
    
 }
 
+/*Button 74 Styling
+<button class="button-74" role="button">Button 74</button>
+*/
+
+/* CSS */
+.button-2 {
+  background-color: #9ebc9e;;
+  border: 2px solid #23001e;
+  border-radius: 30px;
+  box-shadow: #23001e 4px 4px 0 0;
+  color: #23001e;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 30px;
+}
+
+.button-2:hover {
+  background-color: #fff;
+}
+
+.button-2:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
 
 body {
     background-color: #f0edee;
@@ -138,7 +178,7 @@ img {
 /*Portfolio Styling*/
 .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 30px;
   padding: 20px;
   align-items: center;
@@ -152,18 +192,14 @@ img {
 
 #portfolio-content {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   text-align: center;
-  padding: 20px;
+  width: 100%;
+  height: auto;
 }
 
-/*Column Border*/
-#column2 {
-  border-right: 4px solid #23001e;
-}
-
-#column4 {
-  border-left: 4px solid #23001e;
+#grid-skip {
+  grid-column: 3;
 }
 
 
