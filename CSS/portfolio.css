@@ -1,0 +1,26 @@
+/*Portfolio Styling*/
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  padding: 20px;
+  align-items: center;
+  row-gap: 20px;
+}
+
+
+.text-wrapper {
+  text-align: center;
+}
+
+#portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+#grid-skip {
+  grid-column: 3;
+}

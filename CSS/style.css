@@ -50,9 +50,7 @@
    
 }
 
-/*Button 74 Styling
-<button class="button-74" role="button">Button 74</button>
-*/
+
 
 /* CSS */
 .button-2 {
@@ -134,76 +132,8 @@ img {
   height: auto;
   
 }
-/*Main Page Styling*/
-.container {
-    display: grid;
-    grid-template-columns: repeat( 3, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-#container-grid{
-    border: 4px solid #324e23;
-    padding: 20px;
-    border-radius: 10px;
-}
 
 
-/*Splitting Parent Container*/
-.bio {
-  display: flex;
-  width: 100%;
-}
-
-.right-side {
-  flex: 1;
-  padding: 20px;
-}
-
-.bio-img {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-}
-
-.headshot {
-  border: 4px solid #23001e;
-  border-radius: 4px;
-}
-
-.left-side {
-  flex: 1;
-  padding: 20px;
-}
-
-/*Portfolio Styling*/
-.portfolio-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 30px;
-  padding: 20px;
-  align-items: center;
-  row-gap: 20px;
-}
-
-
-.text-wrapper {
-  text-align: center;
-}
-
-#portfolio-content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  text-align: center;
-    column-gap: 30px;
-  padding: 20px;
-  align-items: center;
-  row-gap: 20px;
-
-}
-
-#grid-skip {
-  grid-column: 3;
-}
 
 
 
