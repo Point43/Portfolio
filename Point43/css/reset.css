@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&family=Inter:wght@400;500&display=swap');
+
+/* --------------------------------------------------------------------------
+   Design tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Surfaces */
+  --bg: #0D0B0F;         /* page background */
+  --surface: #1A1620;    /* cards, panels, nav */
+  --surface-raised: #221D2A; /* hover states, modals — one step above surface */
+
+  /* Text */
+  --text: #EDEBEC;       /* primary text */
+  --text-muted: #8C8590; /* captions, secondary copy, timestamps */
+
+  /* Brand / primary */
+  --sage: #9EBC9E;       /* logo, nav highlights, tags, headings accent */
+
+  /* CTA accents — pick one as --cta, keep the other for future use */
+  --cta-plum: #B8447E;
+  --cta-terra: #C1633B;
+  --cta: var(--cta-plum); /* active CTA color — swap to var(--cta-terra) to switch site-wide */
+  --cta-text: #FCEFF5;    /* text/icon color on top of --cta */
+
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.12);
+
+  /* Fonts */
+  --font-mono: 'Roboto Mono', 'SFMono-Regular', Consolas, monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Reset
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+p {
+  color: var(--text);
+}
+
+a {
+  color: var(--sage);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--cta);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+button {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Focus visibility — keep this for accessibility, don't remove */
+:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Reusable utility classes
+   -------------------------------------------------------------------------- */
+.mono {
+  font-family: var(--font-mono);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--sage);
+  background: rgba(158, 188, 158, 0.12);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.btn {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  background: var(--cta);
+  color: var(--cta-text);
+}
+.btn:hover {
+  filter: brightness(1.08);
+}

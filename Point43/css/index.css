@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Point43 — index.css
+   Page-specific styles for the home page (hero, nav, project cards).
+   Assumes reset.css is already linked for tokens/fonts/base resets.
+   ========================================================================== */
+
+  /* Page-specific styles only — colors, fonts, and base resets come from reset.css */
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+  }
+  .logo {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: var(--text);
+  }
+  .logo span { color: var(--sage); }
+  .coord {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+  }
+  .navlinks {
+    display: flex;
+    gap: 32px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+  .navlinks a { color: var(--text-muted); }
+  .navlinks a:hover { color: var(--sage); }
+
+  .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 48px;
+    overflow: hidden;
+    background: var(--bg);
+  }
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(0deg, rgba(13,11,15,0.95) 0%, rgba(13,11,15,0.35) 45%, rgba(13,11,15,0.55) 100%),
+      linear-gradient(90deg, rgba(13,11,15,0.5) 0%, rgba(13,11,15,0.05) 45%);
+    pointer-events: none;
+  }
+  .hero-label {
+    position: absolute;
+    top: 24px;
+    right: 48px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    z-index: 2;
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--sage);
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    z-index: 1;
+  }
+  .hero h1 {
+    font-size: 44px;
+    max-width: 640px;
+    z-index: 1;
+    margin-bottom: 16px;
+  }
+  .sub {
+    font-size: 16px;
+    color: var(--text-muted);
+    max-width: 480px;
+    line-height: 1.6;
+    z-index: 1;
+    margin-bottom: 32px;
+  }
+  .cta-row {
+    display: flex;
+    gap: 24px;
+    z-index: 1;
+  }
+  .scroll-cue {
+    position: absolute;
+    bottom: 32px;
+    left: 48px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+  }
+  .scroll-cue::before {
+    content: '';
+    width: 1px;
+    height: 28px;
+    background: var(--text-muted);
+  }
+
+  .section {
+    padding: 56px 48px;
+  }
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--sage);
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
+
+  .card {
+    transform: translateY(0);
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    transition: transform 0.4s ease-out;
+  }
+  .card-row {
+    display: flex;
+    gap: 20px;
+  }
+  .card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .card-meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+  }
